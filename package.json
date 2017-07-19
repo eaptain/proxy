@@ -1,0 +1,24 @@
+{
+  "name": "eaptain-proxy",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "repository": "https://github.com/eaptain/proxy.git",
+  "author": "I'amee <admin@cavacn.com>",
+  "license": "MIT",
+  "typings": "dist/index.d.ts",
+  "dependencies": {
+    "@types/http-proxy": "^1.12.0",
+    "@types/koa": "^2.0.39",
+    "@types/koa-bodyparser": "^3.0.23",
+    "@types/koa-router": "^7.0.22",
+    "eaptain-cli": "^0.0.2",
+    "http-proxy": "^1.16.2",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.2.1"
+  },
+  "scripts": {
+    "compile": "rm -rf dist && tsc",
+    "prepublish": "npm run compile"
+  }
+}
