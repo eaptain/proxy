@@ -3,6 +3,8 @@ import {ClientOpts} from 'redis'
 import * as koa from 'koa'
 import * as koaRouter from 'koa-router'
 import * as httProxy from 'http-proxy'
+import * as favicon from 'koa-favicon'
+import * as path from 'path'
 
 export class Proxy {
 
@@ -45,6 +47,7 @@ export class Proxy {
         });
         this.app.use(router.routes());
         this.app.use(router.allowedMethods());
+        this.app.use(favicon(path.join(__dirname, '../static/favicon.ico')));
     }
 
     use(middleware: koa.Middleware) {
